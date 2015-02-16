@@ -60,10 +60,10 @@
       unitInput = 'floz';
       ingredientInput = itemFluidCheck.slice(3).join(' ');
     } else if (str.split(' ')[1] === 'T') {
-      unitInput = 'T',
-      ingredientInput = itemInput.join(' ');
+      unitInput = 'T';
+      ingredientInput = itemFluidCheck.slice(2).join(' ');
     } else {
-      unitInput = itemInput.shift(),
+      unitInput = itemInput.shift();
       ingredientInput = itemInput.join(' ');
     }
 
@@ -148,6 +148,7 @@
       { 'unit': 'oz', 'conversion': 28.3 }
     ];
     var ingredients = [
+      { 'ingredient': 'water', 'density': 1 },
       // FLOURS
       { 'ingredient': 'flour', 'density': 0.58 },
       { 'ingredient': 'all purpose flour', 'density': 0.58 },
